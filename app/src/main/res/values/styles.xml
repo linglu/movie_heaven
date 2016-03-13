@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <style name="TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="TextView.Link">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="TextView.Content" />
+
+    <style name="TextView.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextView.Subtitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/pure_white</item>
+    </style>
+
+    <style name="Button" parent="TextView" >
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/btn_click_selector</item>
+    </style>
+
+    <style name="Button.Content" />
+
+    <style name="Button.Title">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Button.Subtitle">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

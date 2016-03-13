@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.neenbedankt.android-apt'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.linky.heaven"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 4
+        versionName "1.1.2"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    // rxjava
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'com.trello:rxlifecycle:0.4.0'
+    compile 'com.trello:rxlifecycle-components:0.4.0'
+    // green dao
+    compile 'de.greenrobot:greendao:2.0.0'
+    // fastjson
+    compile 'com.alibaba:fastjson:1.2.4'
+    // okHttp
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    // html parser
+    compile files('libs/htmlparser.jar')
+    // lambda
+    compile 'me.tatarka:gradle-retrolambda:3.2.4'
+    // dagger
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    compile 'com.google.dagger:dagger:2.0'
+    compile 'org.glassfish:javax.annotation:10.0-b28'
+    // logger
+    compile 'com.orhanobut:logger:1.10'
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+    // 友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5509.jar')
+}

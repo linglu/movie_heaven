@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OptionsSelectorView">
+        <attr name="data" format="reference"/>
+    </declare-styleable>
+
+    <string-array name="movie_type">
+        <item>全部</item>
+        <item>喜剧</item>
+        <item>爱情</item>
+        <item>悬疑</item>
+        <item>恐怖</item>
+        <item>动作</item>
+        <item>惊悚</item>
+        <item>奇幻</item>
+        <item>剧情</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

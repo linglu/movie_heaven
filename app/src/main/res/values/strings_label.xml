@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="label_search">搜索</string>
+    <string name="label_movie_current_can_download">当前可下载的电影</string>
+    <string name="label_update_every_twelve">每晚12点更新</string>
+
+    <string name="label_cancel">取消</string>
+    <string name="label_confirm">确定</string>
+
+    <string name="label_share_with_friends">分享给朋友</string>
+    <string name="label_download_url">该电影的下载链接</string>
+    <string name="label_copy_to_clipboard">复制到粘贴板</string>
+
+</resources>
